@@ -26,6 +26,10 @@
 {
   background-color: var(--color-secondary);
 }
+.color-secondary
+{
+  color: var(--color-secondary);
+}
 .bg-color-tertiairy
 {
   background-color: var(--color-tertiairy);
