@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
 
 /*test*/
@@ -7,34 +7,30 @@
 }
 
 /*Color*/
-.color-primary
-{
-  color:hsl(31, 77%, 52%);
-}
+
+:root {
+    --color-primary: hsl(31, 77%, 52%);
+    --color-secondary:  hsl(184, 100%, 22%);
+    --color-tertiairy:  hsl(179, 100%, 13%);
+  
+    --paragrph-line: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+  }
+
 .bg-color-primary
 {
-  background-color: hsl(31, 77%, 52%);
+  background-color: var(--color-primary);
 }
-.color-secondary
-{
-  color: hsl(184, 100%, 22%);
-}
+
 .bg-color-secondary
 {
-  background-color: hsl(184, 100%, 22%);
-}
-.color-tertiairy
-{
-  color: hsl(179, 100%, 13%);
+  background-color: var(--color-secondary);
 }
 .bg-color-tertiairy
 {
-  background-color: hsl(179, 100%, 13%);
+  background-color: var(--color-tertiairy);
 }
-.paragrph-line
-{
-  color: hsla(0, 0%, 100%, 0.75);
-}
+
 .color-very-light-gray
 {
     color: hsl(0, 0%, 95%);
@@ -43,75 +39,129 @@
 {
     background-color: hsl(0, 0%, 95%);
 }
-.bg-white
-{
-  background-color: hsl(0, 0%, 100%);
-}
-.white
-{
-  color: hsl(0, 0%, 100%);
-}
-
-
-/*Font*/
-.font-lexend 
-{
-  font-family: 'Lexend Deca', Courier, monospace;
-}
-.font-big-shoulders 
-{
-  font-family: 'Big Shoulders Display', Courier, monospace;
-}
-
-/*size*/
-.size15
-{
-  font-size: 15px;
-}
-
-
-/*display*/
-.flex
-{
-  display: flex;
-}
-.flex-between
-{
-  display: flex;
-  justify-content:space-between;
-  align-items: center;
-}
-.flex-column
-{
-  display: flex;
-  flex-direction: column;
-}
-.flex-column-center
-{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content:space-between;
-}
-.flex-column-between
-{
-  display: flex;
-  flex-direction: column;
-  justify-content:space-between;
-}
 
 * 
 {
   margin: 0;
   padding: 0;
-  gap:20px;
 }
   
 main 
 {
-  position: absolute;
-  top: 0px;
-  bottom: 0;
-  left: 0;
-  right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between;
+  
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
+.card-3column-review
+{
+    display: flex;
+    max-width: 925px;
+
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+.card-3column-review h1
+{
+    color: var(--very-light-gray);
+    font-family: 'Big Shoulders Display', Courier, monospace;
+    font-size: 40px;
+    padding: 15px 0;
+} 
+.card-3column-review section
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 46.5px;
+}
+    
+
+.card-3column-review p
+{
+    font-size: 15px;
+    line-height: 160%;
+    font-family: 'Lexend Deca', Courier, monospace;
+    color: var(--paragrph-line);
+    padding-bottom: 60px;
+}
+
+
+.card-3column-review button
+{
+    cursor: pointer;
+    text-align: center;
+    border-radius: 25px;
+    border: 2px solid var(--very-light-gray);
+    background-color: var(--very-light-gray);
+    padding:13px 35px;
+    transition: all 0.5s;
+    font-family: 'Lexend Deca', Courier, monospace;
+    font-weight: 500;
+    font-size: 15px;
+}
+.sedans
+{
+    border-radius: 8px 0 0 8px;
+}
+.sedans button{
+    color: var(--color-primary);
+}
+
+.suvs button{
+    color: var(--color-secondary);
+}
+.luxury
+{
+    border-radius: 0 8px 8px 0;
+}
+.luxury button{
+    color: var(--color-tertiairy);
+}
+.sedans button:hover{
+    background-color: var(--color-primary);
+    color: var(--very-light-gray);
+}
+.suvs button:hover{
+    background-color: var(--color-secondary);
+    color: var(--very-light-gray);
+}
+.luxury button:hover{
+    background-color: var(--color-tertiairy);
+    color: var(--very-light-gray);
+}
+
+@media all and (min-width: 0px) and (max-width: 830px)
+{
+    .card-3column-review
+    {
+        flex-direction: column;
+        max-width: 375px;
+    }
+    .sedans
+    {
+        border-radius: 8px 8px 0 0 ;
+    }
+    .luxury
+    {
+        border-radius:  0 0 8px 8px ;
+    }
+    header
+    {
+        display: none;
+    }
+    footer
+    {
+        display: none;
+    }
+}
+
