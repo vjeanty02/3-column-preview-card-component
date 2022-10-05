@@ -14,7 +14,7 @@
     --color-tertiairy:  hsl(179, 100%, 13%);
   
     --paragrph-line: hsla(0, 0%, 100%, 0.75);
-    --very-light-gray: hsl(0, 0%, 95%);
+    --color-neutral: hsl(0, 0%, 95%);
   }
 
 .bg-color-primary
@@ -35,15 +35,8 @@
   background-color: var(--color-tertiairy);
 }
 
-.color-very-light-gray
-{
-    color: hsl(0, 0%, 95%);
-}
-.bg-color-very-light-gray
-{
-    background-color: hsl(0, 0%, 95%);
-}
 
+/*General*/
 * 
 {
   margin: 0;
@@ -57,7 +50,7 @@ body
     align-items: center;
     justify-content:space-between;
 
-    background-color: var(--very-light-gray);
+    background-color: var(--color-neutral);
   
     min-height: 100vh;
 }
@@ -72,7 +65,7 @@ body
 }
 .card-3column-review h1
 {
-    color: var(--very-light-gray);
+    color: var(--color-neutral);
     font-family: 'Big Shoulders Display', Courier, monospace;
     font-size: 40px;
     padding: 15px 0;
@@ -102,14 +95,15 @@ body
     cursor: pointer;
     text-align: center;
     border-radius: 25px;
-    border: 2px solid var(--very-light-gray);
-    background-color: var(--very-light-gray);
+    border: 2px solid var(--color-neutral);
+    background-color: var(--color-neutral);
     padding:13px 35px;
     transition: all 0.5s;
     font-family: 'Lexend Deca', Courier, monospace;
     font-weight: 500;
     font-size: 15px;
 }
+
 .sedans
 {
     border-radius: 8px 0 0 8px;
@@ -117,10 +111,19 @@ body
 .sedans button{
     color: var(--color-primary);
 }
+.sedans button:hover{
+    background-color: var(--color-primary);
+    color: var(--color-neutral);
+}
 
 .suvs button{
     color: var(--color-secondary);
 }
+.suvs button:hover{
+    background-color: var(--color-secondary);
+    color: var(--color-neutral);
+}
+
 .luxury
 {
     border-radius: 0 8px 8px 0;
@@ -128,17 +131,9 @@ body
 .luxury button{
     color: var(--color-tertiairy);
 }
-.sedans button:hover{
-    background-color: var(--color-primary);
-    color: var(--very-light-gray);
-}
-.suvs button:hover{
-    background-color: var(--color-secondary);
-    color: var(--very-light-gray);
-}
 .luxury button:hover{
     background-color: var(--color-tertiairy);
-    color: var(--very-light-gray);
+    color: var(--color-neutral);
 }
 
 @media all and (min-width: 0px) and (max-width: 830px)
